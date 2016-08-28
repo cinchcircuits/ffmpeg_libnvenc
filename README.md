@@ -37,6 +37,7 @@ such as audio, video, subtitles and related metadata.
 
 * Download and install the [NVIDIA NVENC SDK for Windows](https://developer.nvidia.com/nvidia-video-codec-sdk) (Yes, that is correct). Extract the SDK's content then navigate to `nvenc-xx.0/samples/nvEncoder/inc` and copy the header files therein to `/usr/include`.
 * Ensure that the NVIDIA CUDA SDK is installed, and copy `cuda.h` to `/usr/include`.
+* sudo aptitude install libbluray-dev libfaac-dev libmp3lame-dev libaacs-dev libfdk-aac-dev  nvidia-cuda-dev  libopencv-dev libopenjpeg-dev libopus-dev libvpx-dev libwebp-dev ocl-icd-opencl-dev libx264-dev
 * You can then run `./configure` with your customization options as is deemed necessary.
 * In my case, I built it with NVENC enabled with the following configuration options on Ubuntu 14.04 LTS:
 
@@ -45,7 +46,7 @@ such as audio, video, subtitles and related metadata.
 	--enable-libbluray --enable-libmp3lame --enable-libopencv --enable-libopenjpeg \
 	--enable-libopus --enable-libfaac --enable-libfdk-aac --enable-libtheora \
 	--enable-libvpx --enable-libwebp --enable-opencl --enable-x11grab --enable-opengl \
-	--enable-openssl --cpu=native --enable-libnvenc
+	--enable-openssl --cpu=native --enable-libnvenc --enable-libx264
 	```
 
 #### Result:
